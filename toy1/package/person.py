@@ -9,12 +9,12 @@ class Person:
         return self._NO_AGE
 
     def __init__(self, name, age):
-        if isinstance(name, str):
+        if isinstance(name, str) and len(name) > 0:
             self.name = name
         else:
             self.name = Person._NO_NAME
 
-        if isinstance(age, int):
+        if isinstance(age, int) and age > 0:
             self.age = age
         else:
             self.age = Person._NO_AGE

@@ -1,5 +1,5 @@
 import unittest
-from toy1.main.person import Person
+from toy1.package.person import Person
 
 
 class MyTestCase(unittest.TestCase):
@@ -11,6 +11,11 @@ class MyTestCase(unittest.TestCase):
     def test_person_with_string_age_is_equal(self):
         test_person = Person("me", "foo")
         self.assertEqual(test_person.age, test_person.get_no_age())
+
+    def test_person_with_empty_name_is_equal(self):
+        test_age = 10
+        test_person = Person("", test_age)
+        self.assertEqual(test_person.name, test_person.get_no_name())
 
     def test_person_string_equal(self):
         person_name = "foo"
